@@ -1,0 +1,2 @@
+# VOC_TO_YOLO
+简单实现VOC格式转YOLO格式
