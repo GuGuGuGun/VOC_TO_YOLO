@@ -24,11 +24,6 @@ classes = list(name)  # 分类名
 print(classes)
 
 
-def Number(number, n):
-    a = int(number * 10 ** n) / 10 ** n
-    return a
-
-
 def FindFileAllData(path):
     full_data = []
     size_data = []
