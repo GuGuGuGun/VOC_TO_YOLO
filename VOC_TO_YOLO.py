@@ -29,8 +29,7 @@ def FindFileAllData(path):
     size_data = []
     box_data = []
     find_size = re.compile(r'<width>(?P<width>.*?)</width>.*'
-                           r'<height>(?P<height>.*?)</height>.*'
-                           r'<depth>(?P<depth>.*?)</depth>.*', re.S)
+                           r'<height>(?P<height>.*?)</height>.*', re.S)
     find_bndbox = re.compile(r'<name>(?P<name>.*?)</name>.*?'
                              r'<xmin>(?P<xmin>.*?)</xmin>.*?'
                              r'<ymin>(?P<ymin>.*?)</ymin>.*?'
@@ -43,10 +42,8 @@ def FindFileAllData(path):
         for item in data_size:
             width = item.group('width')
             height = item.group('height')
-            depth = item.group('depth')
             size_data.append(width)
             size_data.append(height)
-            size_data.append(depth)
         for item in data_bndbox:
             name = item.group(('name'))
             x_min = item.group('xmin')
